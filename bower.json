@@ -1,0 +1,20 @@
+{
+  "name": "sandberg",
+  "description": "",
+  "main": "gruntfile.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "yamm": "https://github.com/geedmo/yamm.git",
+    "Yamm3": "yamm3#^1.1.0"
+  }
+}
