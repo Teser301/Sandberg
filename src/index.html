@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Sandberg</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="css/yamm.css" rel="stylesheet">
-
-
-</head>
-
-<body>
+	<head>
+		<meta charset="utf-8">
+		<title>Sandberg</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link href="css/yamm.css" rel="stylesheet">
+	</head>
+	<body>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-1 logo">
@@ -211,51 +208,51 @@
 				</div>
 			</div>
 			<div class="row gallery">
-				<div class="col-xs-12">
+				<div class="col-md-12 ">
 					<h4>Tootevalik</h4>
-					<div class="col-md-12 gallery-image">
-						<div class="col-md-2">
-						<img src="img/1st.jpg"><h5>VESI</h5>
-						</div>
+						<div class="gallery-image-padding">
+							<div class="col-md-2">
+								<a href="#"><img src="img/1st.jpg"><h5>VESI</h5></a>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><img src="img/2nd.jpg"><h5>Küte</h5></a>
+							</div>
 
-						<div class="col-md-2">
-						<img src="img/2nd.jpg"><h5>Küte</h5>
-						</div>
+							<div class="col-md-2">
+								<a href="#"><img src="img/3rd.jpg"><h5>Kanalisatsioon</h5></a>
+							</div>
 
-						<div class="col-md-2">
-						<img src="img/3rd.jpg"><h5>Kanalisatsioon</h5>
-						</div>
+							<div class="col-md-2">
+								<a href="#"><img src="img/4th.jpg"><h5>Ventilatsioon</h5></a>
+							</div>
 
-						<div class="col-md-2">
-						<img src="img/4th.jpg"><h5>Ventilatsioon</h5>
+							<div class="col-md-2">
+								<a href="#"><img src="img/5th.jpg"><h5>Elekter</h5></a>
+							</div>
 						</div>
-
-						<div class="col-md-2">
-						<img src="img/5th.jpg"><h5>Elekter</h5>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div class="row textbox">
 				<div class="col-md-6 textbox-1">
-					<h5><span>HOOLDUS</span><br/><br/>
-
-					OÜ Sanberg hooldab ja remondib:<br/><br/>
-					1. Soojuspumbade süsteeme (maaküte, õhk-vesi, õhk-õhk)<br/>
-					2. Õli- ja graanulkatlamaju (sh põletite häälestamine ja remont)<br/>
-					3. Soojussõlmesid ja pumplaid<br/><br/>
-
+					<h4>HOOLDUS</h4>
+					<h5>OÜ Sanberg hooldab ja remondib:<br/><br/>
+					<ol>
+						<li>Soojuspumbade süsteeme (maaküte, õhk-vesi, õhk-õhk)</li>
+						<li>Õli- ja graanulkatlamaju (sh põletite häälestamine ja remont)</li>
+						<li>Soojussõlmesid ja pumplaid</li>
+					</ol>
 					Hooldus- ja remonttööde kohta info saamiseks kirjutage aadressile peep@sanberg.ee või täitke allolev vorm.
 					</h5>
 				</div>
 				<div class="col-md-6 textbox-2">
 					
-					<h5><span>PAIGALDUS</span><br/><br/>
-					OÜ Sanberg paigaldab:<br/><br/>
-					1. Küttesüsteemide paigaldamine, häälestamine ja hooldamine<br/>
-					2. Veesüsteemide paigaldamine ja remontimine<br/>
-					3. Kanalisatsioonisüsteemide paigaldamine<br/><br/>
-
+					<h4>PAIGALDUS</h4>
+					<h5>OÜ Sanberg paigaldab:<br/><br/>
+					<ol>
+						<li>Küttesüsteemide paigaldamine, häälestamine ja hooldamine</li>
+						<li>Veesüsteemide paigaldamine ja remontimine</li>
+						<li>Kanalisatsioonisüsteemide paigaldamine</li>
+					</ol>
 					Küsige hinnapakkumist aadressilt peep@sanberg.ee või klikkige siia.	
 					</h5>
 				</div>
@@ -301,14 +298,31 @@
 				<div class="col-md-6 ">
 					<div class="contact-field">
 						<h3>VÕTA MEIEGA ÜHENDUST</h3>
-						<input type="text" name="nimi" placeholder="NIMI*">
-						<input type="text" name="nimi" placeholder="E-MAIL*">
-						<input type="text" name="nimi" placeholder="E-MAIL UUESTI*">
-						<input type="text" name="nimi" placeholder="ASUKOHT*">
-						<input type="text" name="nimi" placeholder="TELEFONINUMBER*">
-						<input type="text" name="nimi" placeholder="PEALKIRI*">
-						<textarea rows="5" cols="50" placeholder="KÜSIMUS*"></textarea><br/>
-						<button>SAADA</button>
+						<form>
+							<div class="form-group">
+							<input type="nimi" class="form-control" placeholder="NIMI*">
+							</div>
+							<div class="form-group">
+							<input type="email" class="form-control" placeholder="E-MAIL*">
+							</div>
+							<div class="form-group">
+							<input type="email-confirm" class="form-control" placeholder="E-MAIL UUESTI*">
+							</div>
+							<div class="form-group">
+							<input type="address" class="form-control" placeholder="ASUKOHT*">
+							</div>
+							<div class="form-group">
+							<input type="telefon-number" class="form-control" placeholder="TELEFONINUMBER*">
+							</div>
+							<div class="form-group">
+							<input type="pealkiri" class="form-control" placeholder="PEALKIRI*">
+							</div>
+							<div class="form-group">
+							<textarea class="form-control" rows="5" placeholder="KÜSIMUS*"></textarea><br/>
+							</div>
+							<div class="form-group">
+							<button class="center-block btn" type="submit">SAADA</button>
+						</form>
 					</div>
 				</div>
 			</div>

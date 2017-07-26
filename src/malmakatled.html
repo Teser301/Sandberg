@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Sandberg</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="css/yamm.css" rel="stylesheet">
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>Sandberg</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link href="css/yamm.css" rel="stylesheet">
+	</head>
 	<body>
 		<div class="container">
 			<div class="row">
@@ -167,7 +167,7 @@
 	 					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</dir>	
 				</div>
-				<div class="row almaleht-contact">
+				<div class="row contact almaleht-contact">
 					<div class="almaleht-right col-md-6">
 						<h4>Kontaktid</h4>
 						<div class="col-md-6">
@@ -205,16 +205,33 @@
 						</div>
 					</div>
 					<div class="almaleht-left col-md-6">
-						<div class="almaleht-contact-field">
-							<h3>Võta meiega ühendust</h3>
-							<input type="text" name="nimi" placeholder="NIMI*">
-							<input type="text" name="nimi" placeholder="E-MAIL*">
-							<input type="text" name="nimi" placeholder="E-MAIL UUESTI*">
-							<input type="text" name="nimi" placeholder="ASUKOHT*">
-							<input type="text" name="nimi" placeholder="TELEFONINUMBER*">
-							<input type="text" name="nimi" placeholder="PEALKIRI*">
-							<textarea rows="5" cols="50" placeholder="KÜSIMUS*"></textarea><br/>
-							<button>SAADA</button>
+						<div class="contact-field">
+							<h3>Võta meiege ühendust</h3>
+							<form>
+								<div class="form-group">
+								<input type="nimi" class="form-control" placeholder="NIMI*">
+								</div>
+								<div class="form-group">
+								<input type="email" class="form-control" placeholder="E-MAIL*">
+								</div>
+								<div class="form-group">
+								<input type="email-confirm" class="form-control" placeholder="E-MAIL UUESTI*">
+								</div>
+								<div class="form-group">
+								<input type="address" class="form-control" placeholder="ASUKOHT*">
+								</div>
+								<div class="form-group">
+								<input type="telefon-number" class="form-control" placeholder="TELEFONINUMBER*">
+								</div>
+								<div class="form-group">
+								<input type="pealkiri" class="form-control" placeholder="PEALKIRI*">
+								</div>
+								<div class="form-group">
+								<textarea class="form-control" rows="5" placeholder="KÜSIMUS*"></textarea><br/>
+								</div>
+								<div class="form-group">
+								<button class="center-block" type="submit">SAADA</button>
+							</form>
 						</div>
 					</div>
 				</div>
