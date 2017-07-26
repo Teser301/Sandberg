@@ -97,8 +97,8 @@ a {
 	border: none;
 	border-radius: 0px;
 	margin: 0px;
-	left: -1px !important;
 	background-color: #f7f7f7;
+	margin-top: 7px;
 			a,ul,li {
 				background-color: #f7f7f7 !important;
 				border: none !important;
@@ -124,18 +124,16 @@ a {
 			padding: 15px 5px 15px 15px !important;
 		}
 }
-.dropdown-menu {
-	margin-top: 7px !important;
-}
+
 
 
 
 .nav {
-	height: 75px;
 	border-bottom: 5px solid $cyan;
 	width: 100%;
 		li {
 			display: inline-block;
+			
 
 				a {
 					font-size: 24px;
@@ -154,13 +152,15 @@ a {
 				}
 		}
 }
+.dropdown {
+	height: 70px;
+}
 
 .navbar-fix {
 	margin-bottom:-15px;
 }
 
 .navbar-collapse {
-	height: 75px;
 	padding-left: 0px;
 	padding-right: 0px;
 }
@@ -454,15 +454,21 @@ a {
 	}
 
 	.dropdown-menu ul {
-    width: 350px;
+    width: auto;
     display: inline-block;
 }
+	.dropdown-menu {
+		padding-top: 0px;
+	}
 	
 	.navbar-toggle {
 		margin-right: 5px;
 	}
 
 	.mobile-list {
+		margin-right: 0px;
+		margin-left: 0px;
+		margin-top: 0px;
 			li {
 				display: block !important;
     			width: 100% !important;
@@ -487,6 +493,7 @@ a {
 			}
 			ul {
 				padding-top: 30px;
+				padding-bottom: 30px !important;
 			}
 			li a  {
 				font-size: 20px !important;
@@ -494,12 +501,12 @@ a {
 				padding-bottom: 5px !important;
 			}
 			span {
-				font-size: 25px;
+				font-size: 23px;
 			}
 	}
 	.nav li a {
 		margin-right: 0px;
-		font-size: 40px;
+		font-size: 35px;
 		padding-bottom: 20px;
     	margin-top: 15px;
 	}
@@ -519,7 +526,7 @@ a {
 			}
 	}
 	.gallery-image {
-		margin-left: 10px;
+		margin-left: 0px;
 	}
 	.textbox-1,
 	.textbox-2 {
@@ -554,6 +561,14 @@ a {
 					}
 			}
 	}
+	.dropdown {
+		border-bottom: 5px solid $cyan;
+		height: auto;
+		margin-top: 0px !important;
+	}
+	.nav {
+		border-bottom: none;
+	}
 
 	.contact-field {
 		margin: 0px;
@@ -564,6 +579,7 @@ a {
 			button {
 				    width: 100%;
 				    margin-left: 0px;
+				    margin-right: 0px;
 			}
 			h3 {
 				font-size: 24px;
@@ -603,9 +619,14 @@ a {
     padding-bottom: 400px;
     	li {
     		list-style: none;
+    		height: 40px;
+    		border-bottom: 2px solid $cyan;
     	}
     	ul {
     		padding-left: 20px;
+    	}
+    	br {
+    		display: none;
     	}
 }
 
@@ -690,6 +711,13 @@ a {
 			h2 {
 				text-align: center;
     			font-size: 40px;
+    			padding-left: 0px;
+    			margin-bottom: -50px;
+    			margin-top: -60px;
+			}
+			.col-md-3 {
+				padding-left: 0px;
+				padding-right: 0px;
 			}
 	}
 	.category-product-info {
@@ -700,13 +728,14 @@ a {
 				width: 100%;
 			}
 			p {
-				font-size: 25px;
+				font-size: 35px;
+				line-height: 35px;
 			}
 			a {
-				font-size: 25px;
+				font-size: 35px;
 			}
 			button {
-				font-size: 25px;
+				font-size: 35px;
 			}
 	}
 	.category-buttons {
@@ -767,7 +796,6 @@ a {
 
 }
 .product-price {
-	height: 66px !important;
 	display: inline-block;
 	border-bottom: 2px solid $background-grey;
 		a:hover {
@@ -822,29 +850,49 @@ a {
 			font-weight: bold;
 			font-size: 16px;
 		}
+
 }
 
 .product-suggestion-padding {
+	padding-left: 0px;
+			padding-right: 0px;
 		.col-md-2 {
 			padding-left: 0px;
 			padding-right: 0px;
 		}
+
+}
+.product-suggestion-title {
+	padding-left: 0px;
+			padding-right: 0px;
 }
 .suggestions {
-	
+	    margin-left: 10px;
+    margin-right: 10px;
 	
 		h4 {
-			    margin-left: 20px;
+			    margin-left: 10px;
 		}
 }
 
 .product {
+	    margin-left: 10px;
+    margin-right: 10px;
 	padding-bottom: 25px;
-	margin-left: 0px;
 	border-bottom: 2px solid $background-grey;
+		.col-md-5 {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
 }
-.product-content {
+.product-main-content {
 	border-bottom: 5px solid $cyan;
+	margin-left: 0px;
+	margin-right: 0px;
+		.col-xs-12 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 }
 
 
@@ -853,6 +901,9 @@ a {
 @media screen and (max-device-width: 900px){
 	.product {
 		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-bottom: 0px;	
 	}
 	.product-images {
 			img:nth-child(1) {
@@ -867,6 +918,8 @@ a {
 			}
 }
 	.product-name {
+		padding-left: 0px;
+		padding-right: 0px;
 			h2 {
 				font-size: 35px;
 			}
@@ -884,6 +937,10 @@ a {
 				    font-weight: bold;
 				    margin-left: 36px;
 			}
+			a {
+				margin-left: 10px;
+				font-size: 24px;
+			}
 	}
 	.product-specs {
 		margin-bottom: 40px;
@@ -899,7 +956,6 @@ a {
 	}
 	.suggestions {
 		border-top: 5px solid $background-grey;
-		border-bottom: 10px solid $cyan;
 			h4 {
 				font-size: 30px;
 				text-align: center;
@@ -907,19 +963,30 @@ a {
 	}
 	.product-suggestion {
 		margin: 0 auto;
-		font-size: 20px;
+		font-size: 25px;
+		line-height: 26px;
 			img {
 				width: 100%;
 			}
 			span {
-				font-size: 22px;
+				font-size: 30px;
 			}
 		margin-bottom: 50px;
+	}
+	.product-upperlinks-row {
+			.col-md-12 {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+	}
+	.product-text {
+		text-align: center;
 	}
 }
 
 
 /*********************MALMA KATLAD*********************************************/
+
 
 .almaleht-content {
 		h1 {
@@ -929,10 +996,15 @@ a {
 		p {
 			font-size: 16px;
 		}
-	padding-bottom: 50px;
+	margin-top: 0px;
+	padding-bottom: 20px;
 	margin-bottom: 20px;
 	border-bottom: 5px solid $grey;
-	padding-left: 35px;
+}
+
+.almaleht-main-content {
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .almaleht-contact {
@@ -946,12 +1018,12 @@ a {
 			font-size: 16px;
 			font-weight: 500 !important;
 		}
-		border-bottom: 5px solid $cyan;
-		padding-bottom: 70px;
+		padding-bottom: 15px;
 }
 
 .almaleht-contact-field {
 	@extend .contact-field;
+	margin-left: 0px !important;
 		button {
     		margin-left: 80px;
 		}
@@ -963,10 +1035,16 @@ a {
 .almaleht-right {
 	float:right;
 	padding-right: 100px;
+		div h5 {
+			line-height: 20px;
+		}
 }
 .almaleht-left {
 	float:left;
 	    margin-top: -10px;
+}
+.almaleht-content-holder {
+	border-bottom: 5px solid $cyan;
 }
 
 /******************MALMA MOBILE***********************************/
@@ -999,13 +1077,19 @@ a {
 		padding-right: 0px;
 		text-align: center;
 		float: none;
+			div h5 {
+				    line-height: 30px;
+			}
+			.col-md-6 {
+				margin-top: 35px;
+			}
 	}
 	.uldinfo {
 		margin-bottom: 80px;
 		margin-top: 420px;
 	}
 	.almaleht-contact {
-	padding-left: 15px;
+	padding-left: 0px;
 	font-family: $font;
 		h4 {
 			font-size: 35px;
@@ -1022,6 +1106,7 @@ a {
 	.almaleht-contact-field {
 		width: 100%;
 		margin-left: 0px;
+
     	padding-left: 0px;
 			h3 {
 				font-size: 24px;
@@ -1034,8 +1119,12 @@ a {
 				font-size: 25px;
     			height: 65px;
 				margin-left: 0px;
+				margin-right: 0px;
 				width: 100%;
 			}
+	}
+	.almaleht-content-holder {
+		border: none;
 	}
 }
 
