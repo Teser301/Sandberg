@@ -98,7 +98,7 @@ a {
 	border-radius: 0px;
 	margin: 0px;
 	background-color: #f7f7f7;
-	margin-top: 7px;
+	margin-top: 7px !important;
 			a,ul,li {
 				background-color: #f7f7f7 !important;
 				border: none !important;
@@ -456,9 +456,11 @@ a {
 	.dropdown-menu ul {
     width: auto;
     display: inline-block;
+    margin-top: 0px !important;
 }
 	.dropdown-menu {
 		padding-top: 0px;
+		margin-top: 0px !important;
 	}
 	
 	.navbar-toggle {
