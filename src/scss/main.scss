@@ -9,10 +9,11 @@ $grey: #c8c8c8;
 $mobile-header: 50px;
 $mobile-body: 40px;
 
+$grid-float-breakpoint: 992px;
 
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-
+@import "custom/custom-grid.scss";
 
 
 .edge {
@@ -53,11 +54,16 @@ a {
 		a {
 			font-size: 18px;
 			font-weight: bold;
-			
+		}
+		img:hover {
+			opacity: 0.5;
 		}
 }
 .logo {
 	padding-right: 39%;
+}
+.logo:hover {
+	opacity: 0.5;
 }
 .language {
 			font-size: 14px;
@@ -194,6 +200,8 @@ a {
 			font-size: 20px;
 			border-bottom: 5px #41c8f4 solid;
 			font-family: $font;
+			text-decoration: none;
+			text-shadow: none;
 		}
 		a:hover {
 			text-decoration: none;
@@ -226,17 +234,29 @@ a {
 			background-color:#49caf4;
 			border: 1px solid #49caf4;
 		}
+		.first-indicator:hover {
+			background-color: transparent;
+		}
 		.second-indicator {
 			background-color: #f79849;
 			border: 1px solid #f79849;
+		}
+		.second-indicator:hover {
+			background-color: transparent;
 		}
 		.third-indicator {
 			background-color: #ffcb06;
 			border: 1px solid #ffcb06;
 		}
+		.third-indicator:hover {
+			background-color: transparent;
+		}
 		.fourth-indicator {
 			background-color: #00adee;
 			border: 1px solid #00adee;
+		}
+		.fourth-indicator:hover {
+			background-color: transparent;
 		}
 		li {
 			width: 14px;
@@ -269,7 +289,7 @@ a {
 		padding: 20px 10px;
 	}
 	h5 {
-		padding-left: 15px;
+		padding-left: 16px;
 		text-align: center;
 		font-weight: bold;
 	}
@@ -361,6 +381,7 @@ a {
     	h3 {
     		font-size: 22px;
     		margin-bottom: 20px;
+    		font-weight: bold;
     	}
 		input {
 			width: 100%;
@@ -397,104 +418,28 @@ a {
 			width: 352px;
 		}
 }
+.form-button {
+	margin-bottom: 0px;
+		textarea {
+			margin-bottom: 0px;
+		}
+}
 
 .empty {
 	margin-bottom: 50px;
+	width: 50%;
 }
 
 /**********************************MOBILE**********************************************/
 
 /*IPAD PRO*/
-@media (max-width: 1025px) {
 
-	.nav {
-		border-bottom: 5px solid $cyan;
-		width: 100%;
-			li {
-				display: inline-block;
-				
-
-					a {
-						font-size: 21px;
-						border: none;
-						width: 100%;
-						position: relative;
-					    display: block;
-					    padding: 25px 15px;
-					    color: $black !important;
-
-					}
-					a:hover {
-						opacity: 0.3;
-						border-bottom: 5px solid #ffffff;
-						z-index: 10;
-					}
-			}
-	}
-	.sublinks-sub {
-		text-align: left;
-	}
-	.sublinks-main {
-		padding-left: 15px;
-	}
-	.gallery .col-md-2 {
-    margin-left:0px;
-    margin-right: 25px;
-	}
-}
 
 
 /* IPAD */
 @media (max-width: 768px) {
 
-	.container {
-		padding-left: 30px;
-    	padding-right: 30px;
-    	width: auto;
-	}
-
-	.logo {
-		text-align: center;
-		padding-right: 0px;
-		padding-left: 0px;
-		img {
-			    width: 200px;
-			}
-	}
-	.sublinks {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-	.sublinks-sub {
-		text-align: left;
-			a {
-				width: 100%;
-			    font-size: 40px;
-			    display: block;
-			    text-align: center;
-			    margin-bottom: 10px;
-			    background-color: $cyan;
-			}
-		}
-	.sublinks-main {
-		text-align: center;
-		padding-left: 0px;
-			a {
-				text-align: center;
-				font-size: 29px;
-			}
-			img {
-				vertical-align: bottom;
-    			width: 63px;
-			}
-	}
-
-	.mainlinks {
-		margin-top: 20px;
-			a {
-				background-color: $cyan;
-			}
-	}
+	
 
 
 
@@ -777,6 +722,9 @@ a {
 			padding-left: 15px;
 			margin-bottom: -10px;
 		}
+		.col-md-3 {
+			margin-bottom: 20px;
+		}
 	margin-bottom: 50px;
 }
 
@@ -792,7 +740,7 @@ a {
 		p {
 			font-size: 16px;
 			margin-top: 10px;
-			margin-bottom: 0px;
+			margin-bottom: 10px;
 			line-height: 16px;
 		}
 		a {
@@ -800,8 +748,13 @@ a {
 			font-size: 16px;
 			font-family: $font;
 		}
+
 		span {
 			color: $cyan;
+		}
+		a:hover,span:hover {
+			text-decoration: none;
+			color: red !important;
 		}
 		button {
 			font-size: 14px;
@@ -833,26 +786,165 @@ a {
 
 /******************************CATEGORY MOBILE***************************************/
 
-@media screen and (max-device-width: 900px) {
-	.category-links {
-	text-align: center;
-    font-size: 35px;
-    line-height: 40px;
-    padding-bottom: 50px;
-    margin-bottom: 100px;
-    padding-left: 0px;
-    padding-right: 0px;
 
-    		ul {
+
+@media (min-width: 992px) {
+	.nav {
+		li a {
+			font-size: 21px !important;
+			padding: 25px 15px;
+		}
+	}
+	.sublinks-main {
+		padding-left: 15px;
+	}
+}
+
+
+@media (max-width: 992px) {
+	.container {
+		padding-left: 30px;
+    	padding-right: 30px;
+	}
+
+	.logo {
+		text-align: center;
+		padding-right: 0px;
+		padding-left: 0px;
+		img {
+			    width: 200px;
+			}
+	}
+	.sublinks {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.sublinks-sub {
+		text-align: left;
+			a {
+				width: 100%;
+			    font-size: 40px;
+			    display: block;
+			    text-align: center;
+			    margin-bottom: 10px;
+			    background-color: $cyan;
+			}
+		}
+	.sublinks-main {
+		text-align: center;
+		padding-left: 0px;
+			a {
+				text-align: center;
+				font-size: 29px;
+			}
+			img {
+				vertical-align: bottom;
+    			width: 63px;
+			}
+	}
+
+	.mainlinks {
+		margin-top: 20px;
+			a {
+				background-color: $cyan;
+			}
+	}
+	.sublinks-sub {
+		text-align: left;
+			a {
+				width: 100%;
+			    font-size: 40px;
+			    display: block;
+			    text-align: center;
+			    margin-bottom: 10px;
+			    background-color: $cyan;
+			}
+		}
+	.sublinks-main {
+		text-align: center;
+		padding-left: 0px;
+			a {
+				text-align: center;
+				font-size: 29px;
+			}
+			img {
+				vertical-align: bottom;
+    			width: 63px;
+			}
+	}
+	.mobile-list {
+			li {
+		    width: 100% !important;
+		    text-align: center;
+		    }
+    }
+    .open > .dropdown-menu {
+    display: initial;
+}
+    .nav li a {
+		    	font-size: 35px;
+		    	border-bottom: 5px solid $cyan;
+
+		    }
+	.category-links {
+	    font-size: 20px;
+	    line-height: 20px;
+	    padding-bottom: 50px;
+	    margin-bottom: 100px;
+
+	    		ul {
+	    			padding-left: 0px;
+	    			padding-right: 0px;
+	    		}
+	    		li {
+	    			margin-top: 25px;
+	    				a {
+	    					color: $cyan;
+	    				}
+	    		}
+	}
+	.category-product {
+			h2 {
+				text-align: center;
+    			font-size: 40px;
     			padding-left: 0px;
-    			padding-right: 0px;
-    		}
-    		li {
-    			margin-top: 25px;
-    				a {
-    					color: $cyan;
-    				}
-    		}
+			}
+	}
+	.category-product-info {
+				p {
+					font-size: 20px;
+					line-height: 20px;
+				}
+				span {
+					font-size: 20px;
+				}
+				button {
+					font-size: 15px;
+				}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.category-links {
+		text-align: center;
+	    font-size: 35px;
+	    line-height: 40px;
+	    padding-bottom: 50px;
+	    margin-bottom: 100px;
+	    padding-left: 0px;
+	    padding-right: 0px;
+
+	    		ul {
+	    			padding-left: 0px;
+	    			padding-right: 0px;
+	    		}
+	    		li {
+	    			margin-top: 25px;
+	    				a {
+	    					color: $cyan;
+	    				}
+	    		}
 	}
 	.category-product {
 			h2 {
@@ -869,8 +961,8 @@ a {
 	}
 	.category-product-info {
 		    margin-top: 100px;
-		    width: 100%;
-		text-align: center;
+		    width: 90%;
+			catext-align: center;
 			img {
 				width: 100%;
 			}
@@ -878,11 +970,11 @@ a {
 				font-size: 35px;
 				line-height: 35px;
 			}
-			a {
+			span {
 				font-size: 35px;
 			}
 			button {
-				font-size: 35px;
+				font-size: 20px;
 			}
 	}
 	.category-buttons {
@@ -902,26 +994,12 @@ a {
 				font-size: 40px;
 			}
 	}
-
-}
-
-@media (max-width: 767px) {
-	.category-links {
-	    font-size: 25px;
-	    line-height: 40px;
-	    padding-left: 0px;
-	    padding-right: 0px;
-
-	    		ul {
-	    			padding-left: 0px;
-	    			padding-right: 0px;
-	    		}
-	    		li {
-	    			margin-top: 25px;
-	    				a {
-	    					color: $cyan;
-	    				}
-	    		}
+	@media (max-width: 480px) {
+			.category-product {
+					.col-xs-6 {
+						width: 100%;
+					}
+			}
 	}
 }
 /***************************PRODUCT***********************************************/
@@ -989,6 +1067,11 @@ a {
 			border-radius: 0px;
 		}
 }
+.product-price-text:hover {
+			a:hover,h2:hover {
+				color: red !important;
+			}
+	}
 
 .product-specs {
 		h3 {
@@ -1019,6 +1102,10 @@ a {
 			color: $cyan;
 			font-weight: bold;
 			font-size: 16px;
+		}
+		a:hover,span:hover {
+			text-decoration: none;
+			color: red;
 		}
 
 }
@@ -1059,6 +1146,7 @@ a {
 	border-bottom: 5px solid $cyan;
 	margin-left: 0px;
 	margin-right: 0px;
+	padding-bottom: 20px;
 		.col-xs-12 {
 			padding-left: 15px;
 			padding-right: 15px;
@@ -1068,7 +1156,55 @@ a {
 
 /*********************PRODUCT PHONE*********************/
 
-@media screen and (max-device-width: 900px){
+
+
+@media (max-width: 767px) {
+	.product-name {
+			h2 {
+				font-size: 35px;
+			}
+			p {
+				font-size: 20px;
+			}
+	}
+	.product-specs {
+		margin-bottom: 40px;
+			h3 {
+				font-size: 40px;
+			}
+			ul {
+				width: auto;
+				margin: 0 auto;
+				font-size: 20px;
+				
+			}
+			li {
+				text-decoration: none;
+				font-size: 20px;
+				padding-bottom: 20px;
+			}
+	}
+	.product-price {
+			a {
+				font-size: 25px;
+			}
+			h2 {
+				margin-top: 0px;
+			}
+	}
+	.product-suggestion-padding {
+
+	}
+	.product-suggestion {
+
+		font-size: 30px;
+			 span {
+			 	font-size: 30px;
+			 }
+			 img {
+			 	margin-right: 0px;
+			 }
+	}
 	.product {
 		margin-bottom: 0px;
 		margin-left: 0px;
@@ -1114,6 +1250,7 @@ a {
 				font-size: 40px;
 			}
 	}
+	
 	.product-specs {
 		margin-bottom: 40px;
 			h3 {
@@ -1164,55 +1301,6 @@ a {
 	}
 }
 
-@media (max-width: 767px) {
-	.product-name {
-			h2 {
-				font-size: 35px;
-			}
-			p {
-				font-size: 20px;
-			}
-	}
-	.product-specs {
-		margin-bottom: 40px;
-			h3 {
-				font-size: 40px;
-			}
-			ul {
-				width: auto;
-				margin: 0 auto;
-				font-size: 20px;
-				
-			}
-			li {
-				text-decoration: none;
-				font-size: 20px;
-				padding-bottom: 20px;
-			}
-	}
-	.product-price {
-			a {
-				font-size: 25px;
-			}
-			h2 {
-				margin-top: 0px;
-			}
-	}
-	.product-suggestion-padding {
-
-	}
-	.product-suggestion {
-
-		font-size: 30px;
-			 span {
-			 	font-size: 30px;
-			 }
-			 img {
-			 	margin-right: 0px;
-			 }
-	}
-}
-
 /*********************MALMA KATLAD*********************************************/
 
 
@@ -1250,9 +1338,20 @@ a {
 	background-color: transparent;
 }
 
+.almaleht-upperlinks-row {
+	margin: 0px;
+}
+.category-upperlinks-row {
+	margin: 0px;
+}
 /******************MALMA MOBILE***********************************/
 
-@media screen and (max-device-width: 900px){
+
+
+@media (max-width: 767px) {
+	.almaleht-content {
+		text-align: center;
+	}
 	.almaleht-content {
 		text-align: left;
 		padding-left: 15px;
@@ -1301,30 +1400,39 @@ a {
 	}
 }
 
-
-@media (max-width: 767px) {
-	.almaleht-content {
-		text-align: center;
-	}
-}
-
 /***********************MISC****************************/
 
 
 .breadcrumb {
 	background-color: transparent;
 	margin: 15px 0px;
-	padding: 0px 15px;
+	padding: 0px;
+	font-family: $font;
+		a {
+			margin: 0px 10px;
+		}
+}
+.active {
+   pointer-events: none;
+   cursor: default;
+   color: #777777 !important;
 }
 
-@media screen and (max-device-width: 900px){
+@media (max-width: 992px) {
 	.breadcrumb {
-		font-size: 35px;
+		padding: 15px 0px;
+			a {
+				font-size: 25px;
+			}
 	}
 }
+
 @media (max-width: 767px) {
 	.breadcrumb {
 		text-align: center;
 		font-size: 20px;
+	}
+	.breadcrumb {
+		font-size: 35px;
 	}
 }
